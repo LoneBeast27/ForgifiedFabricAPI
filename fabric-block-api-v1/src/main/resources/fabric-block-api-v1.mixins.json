@@ -4,10 +4,10 @@
   "compatibilityLevel": "JAVA_25",
   "mixins": [
     "BlockBehaviourPropertiesMixin",
-    "IBlockExtensionMixin",
-    "IBlockStateExtensionMixin",
     "EnchantmentMenuMixin",
     "FlowingFluidMixin",
+    "IBlockExtensionMixin",
+    "IBlockStateExtensionMixin",
     "LavaFluidMixin",
     "LiquidBlockMixin",
     "LivingEntityMixin"

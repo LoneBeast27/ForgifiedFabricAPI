@@ -37,6 +37,7 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockItemTagId;
 import net.minecraft.tags.TagBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
@@ -136,6 +137,10 @@ public abstract class FabricTagsProvider<T> extends TagsProvider<T> {
 				}
 			};
 		}
+
+		protected BlockItemTagAppender<Block> builder(BlockItemTagId tag) {
+			return builder(tag.block());
+		}
 	}
 
 	/**
@@ -188,6 +193,15 @@ public abstract class FabricTagsProvider<T> extends TagsProvider<T> {
 			blockTagBuilder.build().forEach(itemTagBuilder::add);
 		}
 
+		/// Copy the entries from a [BlockItemTagId]'s [Block] tag into its [Item] tag.
+		///
+		/// The [ItemTagsProvider] tags provider must be constructed with an associated [BlockTagsProvider] tags provider to use this method.
+		///
+		/// @param blockItemTagId The block and item tags to copy to and from.
+		public void copy(BlockItemTagId blockItemTagId) {
+			copy(blockItemTagId.block(), blockItemTagId.item());
+		}
+
 		protected BlockItemTagAppender<Item> builder(TagKey<Item> tag) {
 			return new BlockItemTagAppender<>(super.builder(tag)) {
 				@Override
@@ -195,6 +209,10 @@ public abstract class FabricTagsProvider<T> extends TagsProvider<T> {
 					return element.item();
 				}
 			};
+		}
+
+		protected BlockItemTagAppender<Item> builder(BlockItemTagId tag) {
+			return builder(tag.item());
 		}
 	}
 

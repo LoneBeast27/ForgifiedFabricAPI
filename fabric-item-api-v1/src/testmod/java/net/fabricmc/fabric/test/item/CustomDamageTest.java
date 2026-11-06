@@ -36,17 +36,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
 import net.fabricmc.fabric.api.item.v1.EnchantingContext;
 import net.fabricmc.fabric.api.item.v1.EnchantmentEvents;
-import net.fabricmc.fabric.api.registry.FabricPotionBrewingBuilder;
-import net.fabricmc.fabric.api.registry.FuelValueEvents;
 import net.fabricmc.fabric.api.util.TriState;
 
 public class CustomDamageTest implements ModInitializer {
@@ -65,11 +63,16 @@ public class CustomDamageTest implements ModInitializer {
 	public static final ResourceKey<Item> WEIRD_PICK_KEY = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("fabric-item-api-v1-testmod", "weird_pickaxe"));
 	public static final Item WEIRD_PICK = new WeirdPick(WEIRD_PICK_KEY);
 
+	public static final ResourceKey<Item> BREAKING_ITEM_KEY = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("fabric-item-api-v1-testmod", "breaking_item"));
+	public static final Item BREAKING_ITEM = new Item(new Item.Properties().durability(10).customDamage((stack, amount, entity, slot, breakCallback) -> {
+		breakCallback.run();
+		return stack.getMaxDamage();
+	}).setId(BREAKING_ITEM_KEY));
+
 	@Override
 	public void onInitialize() {
 		Registry.register(BuiltInRegistries.ITEM, WEIRD_PICK_KEY, WEIRD_PICK);
-		FuelValueEvents.BUILD.register((builder, context) -> builder.add(WEIRD_PICK, context.baseSmeltTime()));
-		FabricPotionBrewingBuilder.BUILD.register(builder -> builder.addMix(Potions.WATER, WEIRD_PICK, Potions.AWKWARD));
+		Registry.register(BuiltInRegistries.ITEM, BREAKING_ITEM_KEY, BREAKING_ITEM);
 		EnchantmentEvents.ALLOW_ENCHANTING.register(((enchantment, target, enchantingContext) -> {
 			if (target.is(Items.DIAMOND_PICKAXE) && enchantment.is(Enchantments.SHARPNESS) && EnchantmentHelper.hasTag(target, EnchantmentTags.MINING_EXCLUSIVE)) {
 				return TriState.TRUE;
@@ -85,7 +88,7 @@ public class CustomDamageTest implements ModInitializer {
 		}
 		
 		private static Item.Properties buildProperties(ResourceKey<Item> resourceKey) {
-			Item.Properties props = new Item.Properties().pickaxe(ToolMaterial.GOLD, 3f, 5f).setId(resourceKey);
+			Item.Properties props = new Item.Properties().pickaxe(ToolMaterial.GOLD, 3f, 5f).cookingFuel(ContextIntProviders.COOKING_TIME_WOOD_ITEMS_LARGE).setId(resourceKey);
 			((FabricItem.Properties) props).customDamage(WEIRD_DAMAGE_HANDLER);
 			return props;
 		}

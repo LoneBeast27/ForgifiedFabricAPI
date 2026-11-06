@@ -42,10 +42,7 @@ import net.fabricmc.fabric.impl.resource.conditions.ResourceConditionsImpl;
 @Mixin(SimpleJsonResourceReloadListener.class)
 public class SimpleJsonResourceReloadListenerMixin {
 	@WrapOperation(
-			method = {
-					"scanDirectory(Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/FileToIdConverter;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Ljava/util/Map;)V",
-					"scanDirectoryWithModifier(Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/FileToIdConverter;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Ljava/util/Map;Ljava/util/function/Consumer;)V"
-			},
+			method = "scanDirectory(Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/FileToIdConverter;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Ljava/util/Map;)Ljava/util/Map;",
 			at = @At(value = "INVOKE", target = "Lcom/mojang/serialization/Codec;parse(Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;"))
 	private static DataResult<Optional<?>> applyResourceConditions(Codec<?> instance, DynamicOps<JsonElement> dynamicOps, Object object, Operation<DataResult<Optional<?>>> original,
 														@Local(argsOnly = true) FileToIdConverter resourceFinder,
@@ -60,7 +57,7 @@ public class SimpleJsonResourceReloadListenerMixin {
 		if (resourceData.isJsonObject()) {
 			JsonObject obj = resourceData.getAsJsonObject();
 
-			final String dataType = resourceFinder.prefix();
+			final String dataType = this.lister.prefix();
 
 			if (!ResourceConditionsImpl.applyResourceConditions(obj, dataType, entry.getKey(), registryInfo)) {
 				return DataResult.success(Optional.empty());

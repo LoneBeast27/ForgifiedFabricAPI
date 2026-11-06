@@ -27,40 +27,51 @@ import net.neoforged.neoforge.event.RegisterTooltipAppendersEvent;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.item.component.TooltipProvider;
 
+/**
+ * NeoForge implementation: ordering requests are collected and handed to NeoForge's {@link RegisterTooltipAppendersEvent}.
+ * 26.3: tooltip providers are registered as a component type plus a {@link TooltipProvider.Getter}.
+ */
 public final class ItemComponentTooltipProviderRegistryImpl {
-	private static final List<DataComponentType<? extends TooltipProvider>> first = new ArrayList<>();
-	private static final List<DataComponentType<? extends TooltipProvider>> last = new ArrayList<>();
-	private static final Map<DataComponentType<?>, List<DataComponentType<? extends TooltipProvider>>> before = new IdentityHashMap<>();
-	private static final Map<DataComponentType<?>, List<DataComponentType<? extends TooltipProvider>>> after = new IdentityHashMap<>();
+	private static final List<TooltipPair<?>> first = new ArrayList<>();
+	private static final List<TooltipPair<?>> last = new ArrayList<>();
+	private static final Map<DataComponentType<?>, List<TooltipPair<?>>> before = new IdentityHashMap<>();
+	private static final Map<DataComponentType<?>, List<TooltipPair<?>>> after = new IdentityHashMap<>();
+
+	private ItemComponentTooltipProviderRegistryImpl() {
+	}
 
 	public static void register(RegisterTooltipAppendersEvent event) {
-		for (DataComponentType<? extends TooltipProvider> type : first) {
-			event.registerComponentAppenderBeforeAll(type, TooltipAppender.createComponentAppender(type));
+		for (TooltipPair<?> pair : first) {
+			event.registerComponentAppenderBeforeAll(pair.component(), pair.appender());
 		}
-		for (DataComponentType<? extends TooltipProvider> type : last) {
-			event.registerComponentAppenderAfterAll(type, TooltipAppender.createComponentAppender(type));
+
+		for (TooltipPair<?> pair : last) {
+			event.registerComponentAppenderAfterAll(pair.component(), pair.appender());
 		}
-		before.forEach((type, others) -> 
-			others.forEach(other ->
-				event.registerComponentAppenderBefore(other, type, TooltipAppender.createComponentAppender(other))));
-		after.forEach((type, others) -> 
-			others.forEach(other ->
-				event.registerComponentAppenderAfter(other, type, TooltipAppender.createComponentAppender(other))));
+
+		before.forEach((anchor, pairs) -> pairs.forEach(pair -> event.registerComponentAppenderBefore(pair.component(), anchor, pair.appender())));
+		after.forEach((anchor, pairs) -> pairs.forEach(pair -> event.registerComponentAppenderAfter(pair.component(), anchor, pair.appender())));
 	}
 
-	public static void addFirst(DataComponentType<? extends TooltipProvider> componentType) {
-		first.add(componentType);
+	public static <T> void addFirst(DataComponentType<T> componentType, TooltipProvider.Getter<T> getter) {
+		first.add(new TooltipPair<>(componentType, getter));
 	}
 
-	public static void addLast(DataComponentType<? extends TooltipProvider> componentType) {
-		last.add(componentType);
+	public static <T> void addLast(DataComponentType<T> componentType, TooltipProvider.Getter<T> getter) {
+		last.add(new TooltipPair<>(componentType, getter));
 	}
 
-	public static void addBefore(DataComponentType<?> anchor, DataComponentType<? extends TooltipProvider> componentType) {
-		before.computeIfAbsent(anchor, k -> new ArrayList<>()).add(componentType);
+	public static <T> void addBefore(DataComponentType<?> anchor, DataComponentType<T> componentType, TooltipProvider.Getter<T> getter) {
+		before.computeIfAbsent(anchor, k -> new ArrayList<>()).add(new TooltipPair<>(componentType, getter));
 	}
 
-	public static void addAfter(DataComponentType<?> anchor, DataComponentType<? extends TooltipProvider> componentType) {
-		after.computeIfAbsent(anchor, k -> new ArrayList<>()).add(componentType);
+	public static <T> void addAfter(DataComponentType<?> anchor, DataComponentType<T> componentType, TooltipProvider.Getter<T> getter) {
+		after.computeIfAbsent(anchor, k -> new ArrayList<>()).add(new TooltipPair<>(componentType, getter));
+	}
+
+	private record TooltipPair<T>(DataComponentType<T> component, TooltipProvider.Getter<T> getter) {
+		TooltipAppender appender() {
+			return TooltipAppender.createComponentAppender(this.component, this.getter);
+		}
 	}
 }

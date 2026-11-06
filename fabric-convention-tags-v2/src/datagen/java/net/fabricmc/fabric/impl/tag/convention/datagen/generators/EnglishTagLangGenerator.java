@@ -88,6 +88,7 @@ public class EnglishTagLangGenerator extends FabricLanguageProvider {
 		translationBuilder.add(ConventionalBlockTags.GLAZED_TERRACOTTAS, "Glazed Terracottas");
 		translationBuilder.add(ConventionalBlockTags.CONCRETES, "Concretes");
 		translationBuilder.add(ConventionalBlockTags.BUDDING_BLOCKS, "Budding Blocks");
+		translationBuilder.add(ConventionalBlockTags.ICE, "Ice");
 		translationBuilder.add(ConventionalBlockTags.BUDS, "Buds");
 		translationBuilder.add(ConventionalBlockTags.CLUSTERS, "Clusters");
 		translationBuilder.add(ConventionalBlockTags.VILLAGER_JOB_SITES, "Villager Job Sites");
@@ -135,6 +136,9 @@ public class EnglishTagLangGenerator extends FabricLanguageProvider {
 		translationBuilder.add(ConventionalBlockTags.RED_DYED, "Red Dyed Blocks");
 		translationBuilder.add(ConventionalBlockTags.WHITE_DYED, "White Dyed Blocks");
 		translationBuilder.add(ConventionalBlockTags.YELLOW_DYED, "Yellow Dyed Blocks");
+		translationBuilder.add(ConventionalBlockTags.DYEABLE, "Dyeable Blocks");
+		translationBuilder.add(ConventionalBlockTags.REDYEABLE_SIMPLE_DYEABLE, "Redyeable Blocks");
+		translationBuilder.add(ConventionalBlockTags.UNDYED_SIMPLE_DYEABLE, "Undyed Blocks");
 		translationBuilder.add(ConventionalBlockTags.STORAGE_BLOCKS, "Storage Blocks");
 		translationBuilder.add(ConventionalBlockTags.STORAGE_BLOCKS_BONE_MEAL, "Bone Meal Storage Blocks");
 		translationBuilder.add(ConventionalBlockTags.STORAGE_BLOCKS_COAL, "Coal Storage Blocks");
@@ -305,6 +309,7 @@ public class EnglishTagLangGenerator extends FabricLanguageProvider {
 		translationBuilder.add(ConventionalItemTags.GLAZED_TERRACOTTAS, "Glazed Terracottas");
 		translationBuilder.add(ConventionalItemTags.CONCRETES, "Concretes");
 		translationBuilder.add(ConventionalItemTags.CONCRETE_POWDERS, "Concrete Powders");
+		translationBuilder.add(ConventionalItemTags.ICE, "Ice");
 		translationBuilder.add(ConventionalItemTags.BUDDING_BLOCKS, "Budding Blocks");
 		translationBuilder.add(ConventionalItemTags.BUDS, "Buds");
 		translationBuilder.add(ConventionalItemTags.CLUSTERS, "Clusters");
@@ -370,6 +375,11 @@ public class EnglishTagLangGenerator extends FabricLanguageProvider {
 		translationBuilder.add(ConventionalItemTags.RED_DYED, "Red Dyed Items");
 		translationBuilder.add(ConventionalItemTags.WHITE_DYED, "White Dyed Items");
 		translationBuilder.add(ConventionalItemTags.YELLOW_DYED, "Yellow Dyed Items");
+		translationBuilder.add(ConventionalItemTags.DYEABLE, "Dyeable Items");
+		translationBuilder.add(ConventionalItemTags.SIMPLE_DYEABLE, "Simple Dyeable Items");
+		translationBuilder.add(ConventionalItemTags.DYNAMIC_DYEABLE, "Dynamically Dyeable Items");
+		translationBuilder.add(ConventionalItemTags.REDYEABLE_SIMPLE_DYEABLE, "Redyeable Items");
+		translationBuilder.add(ConventionalItemTags.UNDYED_SIMPLE_DYEABLE, "Undyed Items");
 		translationBuilder.add(ConventionalItemTags.STORAGE_BLOCKS, "Storage Blocks");
 		translationBuilder.add(ConventionalItemTags.STORAGE_BLOCKS_BONE_MEAL, "Bone Meal Storage Blocks");
 		translationBuilder.add(ConventionalItemTags.STORAGE_BLOCKS_COAL, "Coal Storage Blocks");
@@ -509,6 +519,7 @@ public class EnglishTagLangGenerator extends FabricLanguageProvider {
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_JUNGLE, "Jungle Primary Wood Type");
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_ACACIA, "Acacia Primary Wood Type");
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_DARK_OAK, "Dark Oak Primary Wood Type");
+		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_POPLAR, "Poplar Primary Wood Type");
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_MANGROVE, "Mangrove Primary Wood Type");
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_CHERRY, "Cherry Primary Wood Type");
 		translationBuilder.add(ConventionalBiomeTags.PRIMARY_WOOD_TYPE_PALE_OAK, "Pale Oak Primary Wood Type");

@@ -21,7 +21,6 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -33,9 +32,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.FlatLevelSource;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorSettings;
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
@@ -48,16 +45,16 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 //import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 public class DataGeneratorEntrypoint {
-	public static final ResourceKey<ConfiguredFeature<?, ?>> COMMON_DESERT_WELL = ResourceKey.create(
-			Registries.CONFIGURED_FEATURE,
+	public static final ResourceKey<Feature> COMMON_DESERT_WELL = ResourceKey.create(
+			Registries.FEATURE,
 			Identifier.fromNamespaceAndPath(FabricBiomeTest.MOD_ID, "fab_desert_well")
 	);
 	public static final ResourceKey<PlacedFeature> PLACED_COMMON_DESERT_WELL = ResourceKey.create(
 			Registries.PLACED_FEATURE,
 			Identifier.fromNamespaceAndPath(FabricBiomeTest.MOD_ID, "fab_desert_well")
 	);
-	public static final ResourceKey<ConfiguredFeature<?, ?>> COMMON_ORE = ResourceKey.create(
-			Registries.CONFIGURED_FEATURE,
+	public static final ResourceKey<Feature> COMMON_ORE = ResourceKey.create(
+			Registries.FEATURE,
 			Identifier.fromNamespaceAndPath(FabricBiomeTest.MOD_ID, "common_ore")
 	);
 	public static final ResourceKey<PlacedFeature> PLACED_COMMON_ORE = ResourceKey.create(
