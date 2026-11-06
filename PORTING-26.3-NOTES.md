@@ -50,3 +50,5 @@ The merge is reproducible with the rule script described below; hand-merged file
 - resource-conditions: NeoForge `ResourcePackLoaderMixin` uses upstream's renamed `FabricOverlayMetadataSection` and `PackMetadataResources`.
 - events-interaction: removed `FakePlayerPacketListener.handleAnimate` (swing packet no longer exists in 26.3).
 - object-builder: widened `PoiTypes.register` locally (private in 26.3).
+- datagen: `withConditions` output keeps NeoForge's `ICondition...` overload and forwards it.
+- biome-api: removed upstream's new unit test `BiomeModificationContextImplTest` (it targets upstream's direct-mutation impl; FFAPI's impl wraps NeoForge builders).
