@@ -1,0 +1,153 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-convention-tags-v2",
+    "version": "4.10.5+71cd11ab5d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-convention-tags-v2-4.10.5+71cd11ab5d.jar",
+          "url": "fabric-convention-tags-v2-4.10.5+71cd11ab5d.jar",
+          "size": 266214,
+          "sha512": "0a79d93c71dc64e0fc8f18b53cce72b7774fb7c3e91048db2794b664f1e38930f371c195ef54cc11cb8a89c72f1b31547ec2af0e782cfca907941cc2774a0377",
+          "sha256": "3c67e63df63729461ee501ed6dbd51328045f36d86bbc23e99ff87a78e6346f5",
+          "sha1": "7f69a31c74cc50ed2f5fad238926576d5b143fb0",
+          "md5": "b7c0a275eb74415126f5612b5c1b0d00"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-convention-tags-v2-4.10.5+71cd11ab5d.jar",
+          "url": "fabric-convention-tags-v2-4.10.5+71cd11ab5d.jar",
+          "size": 266214,
+          "sha512": "0a79d93c71dc64e0fc8f18b53cce72b7774fb7c3e91048db2794b664f1e38930f371c195ef54cc11cb8a89c72f1b31547ec2af0e782cfca907941cc2774a0377",
+          "sha256": "3c67e63df63729461ee501ed6dbd51328045f36d86bbc23e99ff87a78e6346f5",
+          "sha1": "7f69a31c74cc50ed2f5fad238926576d5b143fb0",
+          "md5": "b7c0a275eb74415126f5612b5c1b0d00"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-accesstransformer.cfg",
+          "url": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    },
+    {
+      "name": "interfaceInjectionDataElements",
+      "attributes": {
+        "org.gradle.category": "interfaceinjection"
+      },
+      "files": [
+        {
+          "name": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-interfaceinjection.json",
+          "url": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-interfaceinjection.json",
+          "size": 87,
+          "sha512": "97f394e934d2726723c36493edd9bc5d49411563c188595f5d6e390f53db507300bceadd5f4a39a81c760f46d1eced58d43e1867959705d42e11248785f388f5",
+          "sha256": "dc9c6d809868f1d685c3837a496013cff894f66f7da975c304eebdb9f70b2372",
+          "sha1": "c1889ffbcc85a92f1b7d5873816adc10b13923fe",
+          "md5": "a5c8e34701b4083b47ff3f705d3938e8"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-sources.jar",
+          "url": "fabric-convention-tags-v2-4.10.5+71cd11ab5d-sources.jar",
+          "size": 253540,
+          "sha512": "4b112eee37840d1566fc132d14b31e43e312b0eb18a57cfb2b0681d8e82f08e608d46c34b340440f8de91a3834a78f0a83be374128e9fc5cd5cdfccc573d3891",
+          "sha256": "687887fc48ff2983f5e3482cede16612246b7da94820b2168f941556d3d03b35",
+          "sha1": "62a2d7e56fdaf5a8d94ab2b609123304cc74998f",
+          "md5": "48bcd4c4c7b62e54f9d0ff4cb68021a0"
+        }
+      ]
+    }
+  ]
+}

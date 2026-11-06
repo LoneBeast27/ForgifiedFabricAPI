@@ -1,0 +1,29 @@
+{
+  "net/minecraft/client/renderer/block/dispatch/BlockStateModel": [
+    "net/fabricmc/fabric/api/client/renderer/v1/model/FabricBlockStateModel"
+  ],
+  "net/minecraft/client/renderer/block/dispatch/BlockStateModelPart": [
+    "net/fabricmc/fabric/api/client/renderer/v1/model/FabricBlockStateModelPart"
+  ],
+  "net/minecraft/client/renderer/block/BlockStateModelSet": [
+    "net/fabricmc/fabric/api/client/renderer/v1/model/FabricBlockStateModelSet"
+  ],
+  "net/minecraft/client/renderer/block/BlockModelRenderState": [
+    "net/fabricmc/fabric/api/client/renderer/v1/render/FabricBlockModelRenderState"
+  ],
+  "net/minecraft/client/renderer/item/ItemStackRenderState$LayerRenderState": [
+    "net/fabricmc/fabric/api/client/renderer/v1/render/FabricLayerRenderState"
+  ],
+  "net/minecraft/client/renderer/OrderedSubmitNodeCollector": [
+    "net/fabricmc/fabric/api/client/renderer/v1/render/FabricOrderedSubmitNodeCollector"
+  ],
+  "net/minecraft/client/resources/model/sprite/MaterialBaker": [
+    "net/fabricmc/fabric/api/client/renderer/v1/sprite/FabricMaterialBaker"
+  ],
+  "net/minecraft/client/renderer/texture/SpriteLoader$Preparations": [
+    "net/fabricmc/fabric/api/client/renderer/v1/sprite/FabricPreparations"
+  ],
+  "net/minecraft/client/renderer/texture/TextureAtlas": [
+    "net/fabricmc/fabric/api/client/renderer/v1/sprite/FabricTextureAtlas"
+  ]
+}

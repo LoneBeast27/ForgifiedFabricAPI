@@ -1,0 +1,20 @@
+{
+  "net/minecraft/advancements/Advancement$Builder": [
+    "net/fabricmc/fabric/api/datagen/v1/advancement/FabricAdvancementBuilder"
+  ],
+  "net/minecraft/data/loot/BlockLootSubProvider": [
+    "net/fabricmc/fabric/api/datagen/v1/loot/FabricBlockLootSubProvider"
+  ],
+  "net/minecraft/data/loot/EntityLootSubProvider": [
+    "net/fabricmc/fabric/api/datagen/v1/loot/FabricEntityLootSubProvider"
+  ],
+  "net/minecraft/data/recipes/RecipeOutput": [
+    "net/fabricmc/fabric/api/datagen/v1/recipe/FabricRecipeOutput"
+  ],
+  "net/minecraft/data/tags/TagAppender": [
+    "net/fabricmc/fabric/api/datagen/v1/provider/FabricTagAppender<T>"
+  ],
+  "net/minecraft/tags/TagBuilder": [
+    "net/fabricmc/fabric/api/datagen/v1/provider/FabricTagBuilder"
+  ]
+}

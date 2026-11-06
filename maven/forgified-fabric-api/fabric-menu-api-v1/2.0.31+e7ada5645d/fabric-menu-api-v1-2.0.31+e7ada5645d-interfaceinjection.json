@@ -1,0 +1,5 @@
+{
+  "net/minecraft/world/MenuProvider": [
+    "net/fabricmc/fabric/api/menu/v1/FabricMenuProvider"
+  ]
+}

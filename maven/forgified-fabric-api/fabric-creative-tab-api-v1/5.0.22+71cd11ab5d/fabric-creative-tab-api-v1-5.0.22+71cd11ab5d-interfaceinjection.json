@@ -1,0 +1,5 @@
+{
+  "net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen": [
+    "net/fabricmc/fabric/api/client/creativetab/v1/FabricCreativeModeInventoryScreen"
+  ]
+}

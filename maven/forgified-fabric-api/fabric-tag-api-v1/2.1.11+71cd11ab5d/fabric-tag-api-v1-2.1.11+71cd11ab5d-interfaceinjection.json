@@ -1,0 +1,5 @@
+{
+  "net/minecraft/tags/TagFile": [
+    "net/fabricmc/fabric/api/tag/v1/FabricTagFile"
+  ]
+}

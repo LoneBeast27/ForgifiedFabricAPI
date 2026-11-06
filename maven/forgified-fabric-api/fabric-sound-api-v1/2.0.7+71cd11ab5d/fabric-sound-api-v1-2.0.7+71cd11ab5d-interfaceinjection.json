@@ -1,0 +1,5 @@
+{
+  "net/minecraft/client/resources/sounds/SoundInstance": [
+    "net/fabricmc/fabric/api/client/sound/v1/FabricSoundInstance"
+  ]
+}

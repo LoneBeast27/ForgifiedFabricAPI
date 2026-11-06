@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-sound-api-v1",
+    "version": "2.0.7+71cd11ab5d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "fabric-sound-api-v1-2.0.7+71cd11ab5d.jar",
+          "url": "fabric-sound-api-v1-2.0.7+71cd11ab5d.jar",
+          "size": 21319,
+          "sha512": "84bd7d94faef5cd5fd1f2de649ad151b3118a63ad24b964f308358c3f1e5060eceefdacc47d73d97959c674dda9c03bc18080cf90e2901e35dd6a136df427fa0",
+          "sha256": "8727e2b9f6ae052112c7de9a61b3fed0b3a4f3ead07ba63f9ee6802d45082793",
+          "sha1": "5aa38a2a14cb432d94b83a14d2f2a9cb3e3e8c72",
+          "md5": "b3c2e3affe8839a4224bd1c084354f0e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-sound-api-v1-2.0.7+71cd11ab5d.jar",
+          "url": "fabric-sound-api-v1-2.0.7+71cd11ab5d.jar",
+          "size": 21319,
+          "sha512": "84bd7d94faef5cd5fd1f2de649ad151b3118a63ad24b964f308358c3f1e5060eceefdacc47d73d97959c674dda9c03bc18080cf90e2901e35dd6a136df427fa0",
+          "sha256": "8727e2b9f6ae052112c7de9a61b3fed0b3a4f3ead07ba63f9ee6802d45082793",
+          "sha1": "5aa38a2a14cb432d94b83a14d2f2a9cb3e3e8c72",
+          "md5": "b3c2e3affe8839a4224bd1c084354f0e"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-sound-api-v1-2.0.7+71cd11ab5d-accesstransformer.cfg",
+          "url": "fabric-sound-api-v1-2.0.7+71cd11ab5d-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    },
+    {
+      "name": "interfaceInjectionDataElements",
+      "attributes": {
+        "org.gradle.category": "interfaceinjection"
+      },
+      "files": [
+        {
+          "name": "fabric-sound-api-v1-2.0.7+71cd11ab5d-interfaceinjection.json",
+          "url": "fabric-sound-api-v1-2.0.7+71cd11ab5d-interfaceinjection.json",
+          "size": 132,
+          "sha512": "3f0d1e8c8089b2a6fd455216ff1ac2cd931130e5201fe3390278bf0c1fa4c5626a66953d886095df1d4aae556dc01d40102d00ecb775887b58532d545535737e",
+          "sha256": "f29f2423d354f7399289f2ee117bec20a988415093b995c058fab049631c7f90",
+          "sha1": "4e4d227a42c21280ab9d1a89b6847eec41d59bfd",
+          "md5": "edb75973dd9bfc9df4aa25993ffb5d9b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-sound-api-v1-2.0.7+71cd11ab5d-sources.jar",
+          "url": "fabric-sound-api-v1-2.0.7+71cd11ab5d-sources.jar",
+          "size": 11584,
+          "sha512": "0762679f45a161f4c58ee0eb1b3ef991fcfc1732157c783416591c6ff82469806a1f9b193f5c0d2cb8a7ecb6928b625467905ad28a9a2776ea89e9e10db6c226",
+          "sha256": "ca186a53e84f3decafa01f2df8433966a1ee330151831452aaf4c8b81c5f156d",
+          "sha1": "657f6c7e062f1cc6ea4b57cd16715bfca1be70cb",
+          "md5": "535426682942f756bce0703fd22ae42d"
+        }
+      ]
+    }
+  ]
+}

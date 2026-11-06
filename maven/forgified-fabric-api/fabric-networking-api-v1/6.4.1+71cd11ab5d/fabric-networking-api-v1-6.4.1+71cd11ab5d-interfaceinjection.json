@@ -1,0 +1,29 @@
+{
+  "net/minecraft/server/network/ServerConfigurationPacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/FabricServerConfigurationPacketListenerImpl"
+  ],
+  "net/minecraft/server/network/ServerCommonPacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/server/network/ServerLoginPacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/server/network/ServerHandshakePacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/server/level/ServerPlayer": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/client/player/LocalPlayer": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ],
+  "net/minecraft/network/Connection": [
+    "net/fabricmc/fabric/api/networking/v1/context/PacketContextProvider"
+  ]
+}

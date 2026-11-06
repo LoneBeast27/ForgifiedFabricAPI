@@ -1,0 +1,106 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-biome-api-v1",
+    "version": "20.1.1+afd84b415d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "fabric-biome-api-v1-20.1.1+afd84b415d.jar",
+          "url": "fabric-biome-api-v1-20.1.1+afd84b415d.jar",
+          "size": 81414,
+          "sha512": "92c3a33825b1829060b521fcc5a3a6ef0faf11eacc5243d798c6df1020e24e1ea9a40522a91a17b72fd40241d15267008a6a6a12b111c18c27e2fa9ff18bc01a",
+          "sha256": "f97bfdb0d83d3e8821e35510edb63fe0ae1609780827752dc55c89df0d4a7eb3",
+          "sha1": "1aac6207b5eb5ba6e66ae07de00d55eeb5c2b3a0",
+          "md5": "0584e53fd6e99e66fe24d1eb28f3d174"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-biome-api-v1-20.1.1+afd84b415d.jar",
+          "url": "fabric-biome-api-v1-20.1.1+afd84b415d.jar",
+          "size": 81414,
+          "sha512": "92c3a33825b1829060b521fcc5a3a6ef0faf11eacc5243d798c6df1020e24e1ea9a40522a91a17b72fd40241d15267008a6a6a12b111c18c27e2fa9ff18bc01a",
+          "sha256": "f97bfdb0d83d3e8821e35510edb63fe0ae1609780827752dc55c89df0d4a7eb3",
+          "sha1": "1aac6207b5eb5ba6e66ae07de00d55eeb5c2b3a0",
+          "md5": "0584e53fd6e99e66fe24d1eb28f3d174"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-biome-api-v1-20.1.1+afd84b415d-accesstransformer.cfg",
+          "url": "fabric-biome-api-v1-20.1.1+afd84b415d-accesstransformer.cfg",
+          "size": 938,
+          "sha512": "9313a4b2c73bd756b62810e2db8f31820ca18f74ac6c886e87f6bb87d6945c592965a4fa8433a5d8d4f0a0a9cce682ac70746b02c9cecd94d428360faa5e6b49",
+          "sha256": "a63bbb975c86fc902153d3d3dda835398209c59c7aa8fd8d82f91c73af8492cb",
+          "sha1": "547affdb098a67cfde2cc2510644eb3356ece946",
+          "md5": "efc264236494ae2fe98e7591039a501c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-biome-api-v1-20.1.1+afd84b415d-sources.jar",
+          "url": "fabric-biome-api-v1-20.1.1+afd84b415d-sources.jar",
+          "size": 43328,
+          "sha512": "aeaaac46793ae0e4f4a102d711b02d4da65bb4b972a01f17ad45b26870634368e796cb46393b9ba22264dfa46a68df918d4a8059c935a9cd7ddc3d05649ff57e",
+          "sha256": "56c1e3083be9e3c16adce236b4d655bd19ed935abcd5f77c2decd5409045aefe",
+          "sha1": "d028a9e7fe3c260156ee2bf02bd875740a5447ca",
+          "md5": "05fd3eb3ae3812885c4d8c72d709cb18"
+        }
+      ]
+    }
+  ]
+}

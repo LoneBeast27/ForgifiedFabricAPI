@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-transfer-api-v1",
+    "version": "8.0.26+e7ada5645d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-lookup-api-v1",
+          "version": {
+            "requires": "2.0.24+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-rendering-fluids-v1",
+          "version": {
+            "requires": "6.0.6+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-transfer-api-v1-8.0.26+e7ada5645d.jar",
+          "url": "fabric-transfer-api-v1-8.0.26+e7ada5645d.jar",
+          "size": 176545,
+          "sha512": "ef1ad99d9acbb0087e155cf6b7310c23247510f0684db1da1a55c2cf82cf7af8926855c084c10f3d5092447d28fa941a7584dd84797f11959debf55bd7678c66",
+          "sha256": "0756512daa5ac538c749cb523124369f081d9e72398c65b1b3c2ddfac741d582",
+          "sha1": "eeb94b0e2df695893f3f15dfd144002dc2d62428",
+          "md5": "c049b2bf1295c336e2c2a78bfc230382"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-lookup-api-v1",
+          "version": {
+            "requires": "2.0.24+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-rendering-fluids-v1",
+          "version": {
+            "requires": "6.0.6+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-transfer-api-v1-8.0.26+e7ada5645d.jar",
+          "url": "fabric-transfer-api-v1-8.0.26+e7ada5645d.jar",
+          "size": 176545,
+          "sha512": "ef1ad99d9acbb0087e155cf6b7310c23247510f0684db1da1a55c2cf82cf7af8926855c084c10f3d5092447d28fa941a7584dd84797f11959debf55bd7678c66",
+          "sha256": "0756512daa5ac538c749cb523124369f081d9e72398c65b1b3c2ddfac741d582",
+          "sha1": "eeb94b0e2df695893f3f15dfd144002dc2d62428",
+          "md5": "c049b2bf1295c336e2c2a78bfc230382"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-transfer-api-v1-8.0.26+e7ada5645d-sources.jar",
+          "url": "fabric-transfer-api-v1-8.0.26+e7ada5645d-sources.jar",
+          "size": 133784,
+          "sha512": "1e018287bfd45cb13fc5f622f9ab00f8303ee151515c1aaa7c1573711af5e72b0e9557193dac95c3eaa574a4c722b21bb99d27381a453e673411f014b40288db",
+          "sha256": "0b6472a5550123004fe6c1a6aa4eea05021df04bf85dbfb2bf0235805cc7080e",
+          "sha1": "1ec222efa845e62d4e093245d3dd085ce326118a",
+          "md5": "66e1c1410754263b561e54f423d7d972"
+        }
+      ]
+    }
+  ]
+}

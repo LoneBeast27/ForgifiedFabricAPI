@@ -1,0 +1,5 @@
+{
+  "net/minecraft/world/entity/Entity": [
+    "net/fabricmc/fabric/api/event/lifecycle/v1/EntityLoadData"
+  ]
+}

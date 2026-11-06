@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-recipe-api-v1",
+    "version": "10.0.12+e7ada5645d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-recipe-api-v1-10.0.12+e7ada5645d.jar",
+          "url": "fabric-recipe-api-v1-10.0.12+e7ada5645d.jar",
+          "size": 83287,
+          "sha512": "432ff3962c0b58db07ce27a418ae2e6a51ce17f77a667d38975cdc7afde021d84ee1040e26d2e11c2798ba43333f376df6cb1bdd9183f467d874f282e8a5b979",
+          "sha256": "61e750388fdaee55e1970a592a4249709b9aa5e2feccb124ceec9cf871850455",
+          "sha1": "237374e289c895215d209529da2e0866b4437cf8",
+          "md5": "e03d41a4e45aa8e3e185046907642714"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-lifecycle-events-v1",
+          "version": {
+            "requires": "4.1.9+241bd9155d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-recipe-api-v1-10.0.12+e7ada5645d.jar",
+          "url": "fabric-recipe-api-v1-10.0.12+e7ada5645d.jar",
+          "size": 83287,
+          "sha512": "432ff3962c0b58db07ce27a418ae2e6a51ce17f77a667d38975cdc7afde021d84ee1040e26d2e11c2798ba43333f376df6cb1bdd9183f467d874f282e8a5b979",
+          "sha256": "61e750388fdaee55e1970a592a4249709b9aa5e2feccb124ceec9cf871850455",
+          "sha1": "237374e289c895215d209529da2e0866b4437cf8",
+          "md5": "e03d41a4e45aa8e3e185046907642714"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-recipe-api-v1-10.0.12+e7ada5645d-accesstransformer.cfg",
+          "url": "fabric-recipe-api-v1-10.0.12+e7ada5645d-accesstransformer.cfg",
+          "size": 428,
+          "sha512": "87bac7f2a3806b031f9649f4a3465f7caef9628d84cd53e18e30bfba5f4b3433f91cfdd8a7ab87877319c26dfa2bc147b9f51c88d3c5a951e68b094edf552014",
+          "sha256": "30f1dd21f67f9f2adc9bfd5591b1180e392d8a9c5575ffceb50ae8809402a52c",
+          "sha1": "1d023f82e84ba3e0694668cc921f4f728ef1ac75",
+          "md5": "fa6bff0b3da7206e5e81311f7e4f8944"
+        }
+      ]
+    },
+    {
+      "name": "interfaceInjectionDataElements",
+      "attributes": {
+        "org.gradle.category": "interfaceinjection"
+      },
+      "files": [
+        {
+          "name": "fabric-recipe-api-v1-10.0.12+e7ada5645d-interfaceinjection.json",
+          "url": "fabric-recipe-api-v1-10.0.12+e7ada5645d-interfaceinjection.json",
+          "size": 365,
+          "sha512": "f14c99a18c39143c6822bd108ac0767e81b0daea8afa782d8ce79d64c7b3fa23604f9b79531da176098e8e52a94f67101177cce751cb9923bb64ce69e6cb4d0b",
+          "sha256": "373fa0349eb3aa90dfaf59f7538860e5bc98c20f393e69c4373c97a97efa5aa6",
+          "sha1": "a13ea32b8e0b6923283b95510c067fb26c96918c",
+          "md5": "5dda84b3967828ba5b4e2b800f7eab86"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-recipe-api-v1-10.0.12+e7ada5645d-sources.jar",
+          "url": "fabric-recipe-api-v1-10.0.12+e7ada5645d-sources.jar",
+          "size": 58476,
+          "sha512": "be96ed40f011d20d0c9c4d7f48a5563c7a927359ba894fa85564e7480638b3745d327741c2787f9112f4a65dbd1f88e332ff288d96b17d103836cb7bb303a2aa",
+          "sha256": "b13cb679d89c673fd8df7766e82e77fccebc19141ef0186b18459e070a346297",
+          "sha1": "88d63cb19326f4eba54d781f309008e51f7c1515",
+          "md5": "aaf815c9b587da1f0a645eb8d82b1672"
+        }
+      ]
+    }
+  ]
+}

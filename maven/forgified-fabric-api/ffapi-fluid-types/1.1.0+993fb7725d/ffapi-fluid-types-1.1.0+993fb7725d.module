@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "ffapi-fluid-types",
+    "version": "1.1.0+993fb7725d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-content-registries-v0",
+          "version": {
+            "requires": "15.0.7+00777e5a5d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-transfer-api-v1",
+          "version": {
+            "requires": "8.0.26+e7ada5645d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ffapi-fluid-types-1.1.0+993fb7725d.jar",
+          "url": "ffapi-fluid-types-1.1.0+993fb7725d.jar",
+          "size": 24259,
+          "sha512": "3eab2a63ca9f8b427abfff3a3a5ab6ec1a81e14d86b6eea8d512cdda21557c0dff42fac48d5b07ed374254c6fdbbb7d750f78c1db9125f223e2cd1d17d4ad611",
+          "sha256": "fc5c158ab26272d9c8fbbaebbc59b544b5464c65d93a638c37163f701a7be27b",
+          "sha1": "574c605df546f46f27a235560a2227b1e068c0b3",
+          "md5": "222e241a653be1a10a83670be8a30383"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-content-registries-v0",
+          "version": {
+            "requires": "15.0.7+00777e5a5d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-transfer-api-v1",
+          "version": {
+            "requires": "8.0.26+e7ada5645d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ffapi-fluid-types-1.1.0+993fb7725d.jar",
+          "url": "ffapi-fluid-types-1.1.0+993fb7725d.jar",
+          "size": 24259,
+          "sha512": "3eab2a63ca9f8b427abfff3a3a5ab6ec1a81e14d86b6eea8d512cdda21557c0dff42fac48d5b07ed374254c6fdbbb7d750f78c1db9125f223e2cd1d17d4ad611",
+          "sha256": "fc5c158ab26272d9c8fbbaebbc59b544b5464c65d93a638c37163f701a7be27b",
+          "sha1": "574c605df546f46f27a235560a2227b1e068c0b3",
+          "md5": "222e241a653be1a10a83670be8a30383"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ffapi-fluid-types-1.1.0+993fb7725d-sources.jar",
+          "url": "ffapi-fluid-types-1.1.0+993fb7725d-sources.jar",
+          "size": 7561,
+          "sha512": "764b944368e28b5abec98db48186fc79042c3687e467ca55c44fdfc1d302002b078a916e6e2041a5d8c2f83bcc92ef74fae281a226e7149aeafedd08458b788d",
+          "sha256": "9d3f98d3bc9d1fffecf9659d396197c9cfc6e01db4067170bf7489257af5197f",
+          "sha1": "db885715debfe0bdfe8d1cbd4e9db8f19af4afa2",
+          "md5": "aca9c55c067d45b1ff47476c42d981d6"
+        }
+      ]
+    }
+  ]
+}

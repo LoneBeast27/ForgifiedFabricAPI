@@ -1,0 +1,8 @@
+{
+  "net/minecraft/world/level/BlockGetter": [
+    "net/fabricmc/fabric/api/blockgetter/v2/FabricBlockGetter"
+  ],
+  "net/minecraft/world/level/block/entity/BlockEntity": [
+    "net/fabricmc/fabric/api/blockgetter/v2/RenderDataBlockEntity"
+  ]
+}

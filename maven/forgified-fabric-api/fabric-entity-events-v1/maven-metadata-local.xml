@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.sinytra.forgified-fabric-api</groupId>
+  <artifactId>fabric-entity-events-v1</artifactId>
+  <versioning>
+    <latest>6.0.4+5d9642955d</latest>
+    <release>6.0.4+5d9642955d</release>
+    <versions>
+      <version>6.0.4+5d9642955d</version>
+    </versions>
+    <lastUpdated>20261106150619</lastUpdated>
+  </versioning>
+</metadata>

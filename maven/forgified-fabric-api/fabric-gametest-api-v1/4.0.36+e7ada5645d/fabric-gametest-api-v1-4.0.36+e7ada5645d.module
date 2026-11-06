@@ -1,0 +1,136 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-gametest-api-v1",
+    "version": "4.0.36+e7ada5645d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-resource-loader-v1",
+          "version": {
+            "requires": "3.1.0+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-gametest-api-v1-4.0.36+e7ada5645d.jar",
+          "url": "fabric-gametest-api-v1-4.0.36+e7ada5645d.jar",
+          "size": 36518,
+          "sha512": "1dc85000466dc86ec5ece53995afa1dbea49764a72a23ca59a00080f63307f6d3d98168c559b0c2ebbc84e2885f55a35ae730123f7264213398a2a242bfba7a1",
+          "sha256": "82b5ff74ffead49d96ecd72c45bf881a3d74ff96a28ac0dc055554144aafe737",
+          "sha1": "27cb1a95ef364c4caac5a44b30c8617e65e517a8",
+          "md5": "4c4286f0e6db1d5d7b0349f41036682e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-resource-loader-v1",
+          "version": {
+            "requires": "3.1.0+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-gametest-api-v1-4.0.36+e7ada5645d.jar",
+          "url": "fabric-gametest-api-v1-4.0.36+e7ada5645d.jar",
+          "size": 36518,
+          "sha512": "1dc85000466dc86ec5ece53995afa1dbea49764a72a23ca59a00080f63307f6d3d98168c559b0c2ebbc84e2885f55a35ae730123f7264213398a2a242bfba7a1",
+          "sha256": "82b5ff74ffead49d96ecd72c45bf881a3d74ff96a28ac0dc055554144aafe737",
+          "sha1": "27cb1a95ef364c4caac5a44b30c8617e65e517a8",
+          "md5": "4c4286f0e6db1d5d7b0349f41036682e"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-gametest-api-v1-4.0.36+e7ada5645d-accesstransformer.cfg",
+          "url": "fabric-gametest-api-v1-4.0.36+e7ada5645d-accesstransformer.cfg",
+          "size": 311,
+          "sha512": "5a34f7f4611868080966df139c153c992508fa332812eb7993a45a73db5d0275f24de1ee38fa307699c77459766c8d3c84d6995797a9decd182839fa08c35ec8",
+          "sha256": "a0a5589ad572a1761e30a5efb78170cddba9c92011814520844c0e2cefc2e88e",
+          "sha1": "e74174d6cdc4a30c5fc2536d81049771a7bc511a",
+          "md5": "1ceda062af0394ae85713259949413d1"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-gametest-api-v1-4.0.36+e7ada5645d-sources.jar",
+          "url": "fabric-gametest-api-v1-4.0.36+e7ada5645d-sources.jar",
+          "size": 20675,
+          "sha512": "f3654418b23aae6da1dad5cfb4a14b8d5906d8551f2c7d644257dcacf62c105f34248932e44dd7ffa73abb8a1c3cea7837dbb5ae60504f47256a8263826af47c",
+          "sha256": "d3770c4a1595aeec81eb0c6993ac20a6145ff4a8d884f6bd1da7a73738474bad",
+          "sha1": "264b59f5d3d6a6e60f59b5b6a720c8d6dafec2fe",
+          "md5": "2ca66175240cd530cd76cdab4309b47b"
+        }
+      ]
+    }
+  ]
+}

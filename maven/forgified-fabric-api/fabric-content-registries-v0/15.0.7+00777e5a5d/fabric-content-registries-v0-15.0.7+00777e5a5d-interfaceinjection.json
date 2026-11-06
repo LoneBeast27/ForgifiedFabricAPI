@@ -1,0 +1,5 @@
+{
+  "net/minecraft/world/entity/Entity": [
+    "net/fabricmc/fabric/api/registry/fluid/EntityFluidExtension"
+  ]
+}

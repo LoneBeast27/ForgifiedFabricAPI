@@ -1,0 +1,5 @@
+{
+  "net/minecraft/client/resources/model/ModelManager": [
+    "net/fabricmc/fabric/api/client/model/loading/v1/FabricModelManager"
+  ]
+}

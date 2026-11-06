@@ -1,0 +1,5 @@
+{
+  "net/minecraft/core/Registry": [
+    "net/fabricmc/fabric/api/event/registry/FabricRegistry"
+  ]
+}

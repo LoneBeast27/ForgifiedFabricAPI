@@ -1,0 +1,139 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-entity-events-v1",
+    "version": "6.0.4+5d9642955d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-entity-events-v1-6.0.4+5d9642955d.jar",
+          "url": "fabric-entity-events-v1-6.0.4+5d9642955d.jar",
+          "size": 79717,
+          "sha512": "1d43101193d428e13953feced746e538bb9ebe91cb8138ba970b29ae54c7cbc2af81a05f20ed1923aa61fd5a75e9e5693c6fbab48eb7b7b4fe32068e98f1543a",
+          "sha256": "e36739c006f92f1c399a158afcedd68c2bb34f08af3725f0943f55e20c6dcec8",
+          "sha1": "caca2495cf734d7e033db3440a32f3a2f1f0aa51",
+          "md5": "ddf5afa889591e31d33878682e9701b2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-api-base",
+          "version": {
+            "requires": "2.0.6+e7ada5645d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-entity-events-v1-6.0.4+5d9642955d.jar",
+          "url": "fabric-entity-events-v1-6.0.4+5d9642955d.jar",
+          "size": 79717,
+          "sha512": "1d43101193d428e13953feced746e538bb9ebe91cb8138ba970b29ae54c7cbc2af81a05f20ed1923aa61fd5a75e9e5693c6fbab48eb7b7b4fe32068e98f1543a",
+          "sha256": "e36739c006f92f1c399a158afcedd68c2bb34f08af3725f0943f55e20c6dcec8",
+          "sha1": "caca2495cf734d7e033db3440a32f3a2f1f0aa51",
+          "md5": "ddf5afa889591e31d33878682e9701b2"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-entity-events-v1-6.0.4+5d9642955d-accesstransformer.cfg",
+          "url": "fabric-entity-events-v1-6.0.4+5d9642955d-accesstransformer.cfg",
+          "size": 0,
+          "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      ]
+    },
+    {
+      "name": "interfaceInjectionDataElements",
+      "attributes": {
+        "org.gradle.category": "interfaceinjection"
+      },
+      "files": [
+        {
+          "name": "fabric-entity-events-v1-6.0.4+5d9642955d-interfaceinjection.json",
+          "url": "fabric-entity-events-v1-6.0.4+5d9642955d-interfaceinjection.json",
+          "size": 120,
+          "sha512": "dda9e5db807f55b4736df2117aa8a99163538ed37f20527bcfae8ee499bd3add05c563f7a6ee050db362e9323614fb0c698ba9bf17ffde5277d500fcf62da026",
+          "sha256": "c50bc42708cda6322a61915c69dcceb218dd356b8e9976eae597715a94d59dd0",
+          "sha1": "ece6862082b3f4c2c6387dcf4b98bfc32f37bb33",
+          "md5": "7b509c518f92d10420bc9e9f8f09480a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-entity-events-v1-6.0.4+5d9642955d-sources.jar",
+          "url": "fabric-entity-events-v1-6.0.4+5d9642955d-sources.jar",
+          "size": 45883,
+          "sha512": "7b57bb479a6534ce5720059b2e7f551ff657b5d7bde7541355274e39db5c8d23d97f053f32e917f684d7b956bb608f1b360f86c22799d33e4dc68ef71d8282f5",
+          "sha256": "6abbbe60f42f56ddb3c41ae24b89b9e2bb80585d9bcaf71a7804b15ea8ec529f",
+          "sha1": "57302cfc53bde3582092a613aba7df87742125a5",
+          "md5": "992f20705f570e78f7a1e3eee903b3cf"
+        }
+      ]
+    }
+  ]
+}

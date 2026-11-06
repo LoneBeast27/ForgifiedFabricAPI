@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.sinytra.forgified-fabric-api",
+    "module": "fabric-client-gametest-api-v1",
+    "version": "6.0.12+afd84b415d",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.6.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-networking-api-v1",
+          "version": {
+            "requires": "6.4.1+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-client-gametest-api-v1-6.0.12+afd84b415d.jar",
+          "url": "fabric-client-gametest-api-v1-6.0.12+afd84b415d.jar",
+          "size": 147494,
+          "sha512": "d3b8f8a77d8576cc7f4da1b2b388721290a41bf5583fd3121d280b61f3119d41ee88d31fff2a4e7c72440d66529ede75ffcedf5d79d5bef7a20f5106e134e66a",
+          "sha256": "566806b6c2c392fc6df175fe64a29b83de3279e04c6bb4bb5842bddef8d12db2",
+          "sha1": "273af616538a2f2f0319fdaf1970cba24de8c02e",
+          "md5": "16e23ee1b3c92d5d3d929684e0ca252a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.sinytra",
+          "module": "forgified-fabric-loader",
+          "version": {
+            "requires": "2.5.83+0.19.3+26.1.2"
+          }
+        },
+        {
+          "group": "org.sinytra.forgified-fabric-api",
+          "module": "fabric-networking-api-v1",
+          "version": {
+            "requires": "6.4.1+71cd11ab5d"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fabric-client-gametest-api-v1-6.0.12+afd84b415d.jar",
+          "url": "fabric-client-gametest-api-v1-6.0.12+afd84b415d.jar",
+          "size": 147494,
+          "sha512": "d3b8f8a77d8576cc7f4da1b2b388721290a41bf5583fd3121d280b61f3119d41ee88d31fff2a4e7c72440d66529ede75ffcedf5d79d5bef7a20f5106e134e66a",
+          "sha256": "566806b6c2c392fc6df175fe64a29b83de3279e04c6bb4bb5842bddef8d12db2",
+          "sha1": "273af616538a2f2f0319fdaf1970cba24de8c02e",
+          "md5": "16e23ee1b3c92d5d3d929684e0ca252a"
+        }
+      ]
+    },
+    {
+      "name": "accessTransformersElements",
+      "attributes": {
+        "org.gradle.category": "accesstransformer"
+      },
+      "files": [
+        {
+          "name": "fabric-client-gametest-api-v1-6.0.12+afd84b415d-accesstransformer.cfg",
+          "url": "fabric-client-gametest-api-v1-6.0.12+afd84b415d-accesstransformer.cfg",
+          "size": 113,
+          "sha512": "868f5dad1e9df5793f37d1766901c1db6b5dcd4fa76d4c022c21e5b033027f31707903f7a86cc09f8529eb26b4496cb90bd64d76a820324f5ec494d4d39e8fb7",
+          "sha256": "4801a18e1e3519445dd981f2a3eed1d4577723527b2483a6a77a344340b58169",
+          "sha1": "046c334091386c7d09261db563ff734088348b17",
+          "md5": "5e8d86ab9b0e8747151d65965fa9423a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fabric-client-gametest-api-v1-6.0.12+afd84b415d-sources.jar",
+          "url": "fabric-client-gametest-api-v1-6.0.12+afd84b415d-sources.jar",
+          "size": 114466,
+          "sha512": "775d067d0203d9db106f88dca65eee117b22b0d0e9ab493baed825967d624d5084abe9a502b10f13ffe8e6a765115551e488449c27f40c657ab7b4891cb81b34",
+          "sha256": "c96b51549792e1f5442dfa17dc1e0d323e105178358ccc2eaa9abe7d7a049bc5",
+          "sha1": "7891016c012744157b506624801c2da0e9d5a0a3",
+          "md5": "f04ca8a54468b2f2f695147ef319fe8b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "net/minecraft/world/level/block/entity/BlockEntity": [
+    "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget"
+  ],
+  "net/minecraft/world/level/chunk/ChunkAccess": [
+    "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget"
+  ],
+  "net/minecraft/world/entity/Entity": [
+    "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget"
+  ],
+  "net/minecraft/world/level/Level": [
+    "net/fabricmc/fabric/api/attachment/v1/AttachmentTarget",
+    "net/fabricmc/fabric/api/attachment/v1/GlobalAttachmentsProvider"
+  ],
+  "net/minecraft/server/MinecraftServer": [
+    "net/fabricmc/fabric/api/attachment/v1/GlobalAttachmentsProvider"
+  ]
+}

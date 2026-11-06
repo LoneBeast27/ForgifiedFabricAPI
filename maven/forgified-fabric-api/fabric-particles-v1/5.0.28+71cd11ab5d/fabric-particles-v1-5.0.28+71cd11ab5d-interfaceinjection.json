@@ -1,0 +1,5 @@
+{
+  "net/minecraft/core/particles/BlockParticleOption": [
+    "net/fabricmc/fabric/api/particle/v1/FabricBlockParticleOption"
+  ]
+}

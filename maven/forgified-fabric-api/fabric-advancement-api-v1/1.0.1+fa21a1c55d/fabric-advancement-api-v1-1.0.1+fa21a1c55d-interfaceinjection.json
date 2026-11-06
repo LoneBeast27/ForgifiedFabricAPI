@@ -1,0 +1,5 @@
+{
+  "net/minecraft/advancements/Advancement$Builder": [
+    "net/fabricmc/fabric/api/advancement/v1/FabricAdvancementBuilder"
+  ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.sinytra.forgified-fabric-api</groupId>
+  <artifactId>ffapi-fluid-types</artifactId>
+  <versioning>
+    <latest>1.1.0+993fb7725d</latest>
+    <release>1.1.0+993fb7725d</release>
+    <versions>
+      <version>1.1.0+993fb7725d</version>
+    </versions>
+    <lastUpdated>20261106150619</lastUpdated>
+  </versioning>
+</metadata>
