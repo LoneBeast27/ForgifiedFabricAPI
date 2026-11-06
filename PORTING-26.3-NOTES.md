@@ -59,7 +59,7 @@ The merge is reproducible with the rule script described below; hand-merged file
 - item-api `DataComponentMapBuilderMixin`: NeoForge 26.3 patches `get(DataComponentType)` into `DataComponentMap.Builder`; FFAPI's copy removed (it clashed and needed `@Overwrite`).
 
 ## Static mixin audit batch 1 (Connector integration `logs/mixin-audit.txt`)
-- content-registries fluid accessors: 26.3 moved per-fluid current into `EntityFluidInteraction.currentAccumulators` / `CurrentAccumulator` (keyed by `FluidType` on NeoForge); accessors retargeted, `trackerByFluid`/`Tracker` no longer used.
+- content-registries fluid accessors: 26.3 moved per-fluid current into `EntityFluidInteraction.currentAccumulators` (a fastutil `Reference2ObjectMap<FluidType, CurrentAccumulator>` on NeoForge); accessors retargeted, `trackerByFluid`/`Tracker` no longer used.
 - item-api `FishingHookMixin` removed: NeoForge checks `canPerformAction(ItemAbilities.FISHING_ROD_CAST)`, which every `FishingRodItem` subclass already satisfies.
 - lifecycle-events client `ClientPacketListenerMixin`: TAGS_LOADED now injected at the `CreativeModeTabs.allTabs()` call NeoForge uses in place of `searchTab()`.
 - datagen `Block/EntityLootSubProviderMixin`: NeoForge iterates the overridable `getKnownBlocks()` / `getKnownEntityTypes()`; the vanilla-only filter wraps those calls.
