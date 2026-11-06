@@ -63,3 +63,8 @@ The merge is reproducible with the rule script described below; hand-merged file
 - item-api `FishingHookMixin` removed: NeoForge checks `canPerformAction(ItemAbilities.FISHING_ROD_CAST)`, which every `FishingRodItem` subclass already satisfies.
 - lifecycle-events client `ClientPacketListenerMixin`: TAGS_LOADED now injected at the `CreativeModeTabs.allTabs()` call NeoForge uses in place of `searchTab()`.
 - datagen `Block/EntityLootSubProviderMixin`: NeoForge iterates the overridable `getKnownBlocks()` / `getKnownEntityTypes()`; the vanilla-only filter wraps those calls.
+
+## Static audit / boot batch 2
+- biome-api classtweaker: removed `accessible`/`mutable` on `Biome.attributes` and `Biome.specialEffects` — NeoForge's coremod (`ReplaceFieldWithGetterAccess`) requires those fields to stay private (it redirects reads to `getModified*`). The NeoForge-builder based modification context doesn't need them.
+- object-builder `AttributeSupplierBuilderAccessor`: field type is `Map` on NeoForge (patched from `ImmutableMap.Builder`).
+- Client-only mixins listed in common `mixins` sections (client-gametest, screen-api, data-attachment client config) moved to `client` sections; FML 12 `[[mixins]]` entries have no side restriction, so the section is what keeps them off dedicated servers.

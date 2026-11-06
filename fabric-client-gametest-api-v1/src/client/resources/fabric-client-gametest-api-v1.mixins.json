@@ -3,34 +3,19 @@
   "package": "net.fabricmc.fabric.mixin.client.gametest",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "ClientChunkCacheAccessor",
-    "ClientChunkCacheStorageAccessor",
-    "ClientLevelAccessor",
     "MainMixin",
     "config.ClientNeoForgeModMixin",
     "config.ConfigSyncMixin",
-    "gui.CycleButtonAccessor",
-    "gui.ScreenAccessor",
-    "gui.ScreenMixin",
     "input.GlCommandEncoderMixin",
     "input.InputConstantsMixin",
-    "input.KeyboardHandlerAccessor",
-    "input.MouseHandlerAccessor",
     "input.SDLEventHandlerMixin",
     "input.VulkanGpuSurfaceMixin",
     "input.WindowMixin",
     "lifecycle.DedicatedServerMixin",
-    "lifecycle.MinecraftMixin",
-    "lifecycle.OptionsAccessor",
-    "lifecycle.OptionsMixin",
     "registry.MappedRegistryMixin",
-    "screenshot.DeltaTrackerDefaultValueAccessor",
     "screenshot.NativeImageMixin",
-    "threading.IntegratedServerMixin",
     "threading.MainMixin",
-    "threading.MinecraftMixin",
     "threading.MinecraftServerMixin",
-    "world.CreateWorldScreenMixin",
     "world.GameRulesAccessor"
   ],
   "plugin": "net.fabricmc.fabric.impl.client.gametest.ClientGameTestMixinConfigPlugin",
@@ -39,5 +24,22 @@
   },
   "overwrites": {
     "requireAnnotations": true
-  }
+  },
+  "client": [
+    "ClientChunkCacheAccessor",
+    "ClientChunkCacheStorageAccessor",
+    "ClientLevelAccessor",
+    "gui.CycleButtonAccessor",
+    "gui.ScreenAccessor",
+    "gui.ScreenMixin",
+    "input.KeyboardHandlerAccessor",
+    "input.MouseHandlerAccessor",
+    "lifecycle.MinecraftMixin",
+    "lifecycle.OptionsAccessor",
+    "lifecycle.OptionsMixin",
+    "screenshot.DeltaTrackerDefaultValueAccessor",
+    "threading.IntegratedServerMixin",
+    "threading.MinecraftMixin",
+    "world.CreateWorldScreenMixin"
+  ]
 }

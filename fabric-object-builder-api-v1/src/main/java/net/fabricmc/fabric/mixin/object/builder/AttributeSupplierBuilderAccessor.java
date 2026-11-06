@@ -16,7 +16,8 @@
 
 package net.fabricmc.fabric.mixin.object.builder;
 
-import com.google.common.collect.ImmutableMap;
+import java.util.Map;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
@@ -27,6 +28,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 
 @Mixin(AttributeSupplier.Builder.class)
 public interface AttributeSupplierBuilderAccessor {
+	// NeoForge 26.3 patches the builder field from ImmutableMap.Builder to a mutable HashMap
 	@Accessor("builder")
-	ImmutableMap.Builder<Holder<Attribute>, AttributeInstance> getBuilder();
+	Map<Holder<Attribute>, AttributeInstance> getBuilder();
 }
