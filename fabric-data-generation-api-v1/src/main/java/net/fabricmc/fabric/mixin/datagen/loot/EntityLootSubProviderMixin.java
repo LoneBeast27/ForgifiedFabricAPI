@@ -22,7 +22,7 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.loot.EntityLootSubProvider;
 import net.minecraft.data.loot.packs.VanillaEntityLoot;
 import net.minecraft.resources.Identifier;
@@ -32,10 +32,11 @@ import net.fabricmc.fabric.api.datagen.v1.loot.FabricEntityLootSubProvider;
 
 @Mixin(EntityLootSubProvider.class)
 public class EntityLootSubProviderMixin implements FabricEntityLootSubProvider {
-	@ModifyExpressionValue(method = "run", at = @At(value = "INVOKE", target = "Lnet/minecraft/data/loot/LootTableSubProvider$Context;listContextElements(Lnet/minecraft/resources/ResourceKey;)Ljava/util/stream/Stream;"))
-	private Stream<Holder.Reference<EntityType<?>>> onlyVanillaEntities(Stream<Holder.Reference<EntityType<?>>> entities) {
+	// NeoForge iterates getKnownEntityTypes() instead of the context's ENTITY_TYPE elements directly
+	@ModifyExpressionValue(method = "run", at = @At(value = "INVOKE", target = "Lnet/minecraft/data/loot/EntityLootSubProvider;getKnownEntityTypes()Ljava/util/stream/Stream;"))
+	private Stream<EntityType<?>> onlyVanillaEntities(Stream<EntityType<?>> entities) {
 		if ((Object) this instanceof VanillaEntityLoot) {
-			return entities.filter(entity -> entity.key().identifier().getNamespace().equals(Identifier.DEFAULT_NAMESPACE));
+			return entities.filter(entity -> BuiltInRegistries.ENTITY_TYPE.getKey(entity).getNamespace().equals(Identifier.DEFAULT_NAMESPACE));
 		}
 
 		return entities;

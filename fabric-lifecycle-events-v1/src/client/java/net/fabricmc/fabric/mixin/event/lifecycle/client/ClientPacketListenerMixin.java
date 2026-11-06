@@ -102,7 +102,8 @@ abstract class ClientPacketListenerMixin {
 		}
 	}
 
-	@Inject(method = "handleUpdateTags", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/CreativeModeTabs;searchTab()Lnet/minecraft/world/item/CreativeModeTab;"))
+	// NeoForge replaces the searchTab() refresh with a loop over allTabs() right after posting TagsUpdatedEvent
+	@Inject(method = "handleUpdateTags", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/CreativeModeTabs;allTabs()Ljava/util/List;"))
 	private void invokeTagsLoaded(ClientboundUpdateTagsPacket packet, CallbackInfo ci) {
 		CommonLifecycleEvents.TAGS_LOADED.invoker().onTagsLoaded(registryAccess, true);
 	}

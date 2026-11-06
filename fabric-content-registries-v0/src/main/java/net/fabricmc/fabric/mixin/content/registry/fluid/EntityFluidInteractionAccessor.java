@@ -26,6 +26,7 @@ import net.minecraft.world.entity.EntityFluidInteraction;
 
 @Mixin(EntityFluidInteraction.class)
 public interface EntityFluidInteractionAccessor {
-	@Accessor
-	Map<FluidType, Object> getTrackerByFluid();
+	// 26.3: per-fluid current state lives in currentAccumulators (keyed by FluidType on NeoForge)
+	@Accessor("currentAccumulators")
+	Map<FluidType, Object> getCurrentAccumulators();
 }

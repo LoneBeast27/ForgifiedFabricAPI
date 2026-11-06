@@ -14,7 +14,6 @@
     "EnchantRandomlyFunctionMixin",
     "EnchantmentBuilderAccessor",
     "EnchantmentBuilderMixin",
-    "FishingHookMixin",
     "IItemExtensionMixin",
     "ItemMixin",
     "ItemPropertiesMixin",
