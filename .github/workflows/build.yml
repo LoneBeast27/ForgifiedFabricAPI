@@ -2,6 +2,9 @@ name: Build
 
 on: [ push, pull_request, merge_group ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -41,7 +44,10 @@ jobs:
         run: mkdir -p ${{ env.GRADLE_USER_HOME }}/caches/fabric-loom/assets
 
       - name: Build with Gradle
-        run: ./gradlew build publishToMavenLocal --stacktrace
+        shell: bash
+        run: |
+          set -o pipefail
+          ./gradlew build publishToMavenLocal --stacktrace --continue 2>&1 | tee build.log
 
       - uses: Juuxel/publish-checkstyle-report@v1
         if: ${{ failure() }}
@@ -63,3 +69,25 @@ jobs:
         with:
           name: Maven Local ${{ matrix.java }}
           path: /root/.m2/repository/org/sinytra/forgified-fabric-api/
+
+      # Fork-only: publish the log and jars to a ci/<branch> git branch so tooling without
+      # Actions API access can read results with a plain `git fetch`.
+      - name: Publish CI report branch
+        if: ${{ always() && github.event_name == 'push' && github.repository_owner == 'LoneBeast27' }}
+        shell: bash
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          out=$(mktemp -d)
+          cp build.log "$out/" 2>/dev/null || echo "no build log" > "$out/build.log"
+          grep -nE '^e: |error:|FAILED|BUILD (SUCCESSFUL|FAILED)|What went wrong' build.log | head -400 > "$out/errors.txt" || true
+          mkdir -p "$out/jars" && find . -path '*/build/libs/*.jar' -not -path './.git/*' -exec cp {} "$out/jars/" \; || true
+          mkdir -p "$out/maven" && cp -r /root/.m2/repository/org/sinytra/forgified-fabric-api "$out/maven/" 2>/dev/null || true
+          cat > "$out/STATUS" <<EOT
+          commit=${GITHUB_SHA}
+          branch=${GITHUB_REF_NAME}
+          run=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+          result=${{ job.status }}
+          EOT
+          cd "$out" && git init -q -b report && git add -A
+          git -c user.name=ci -c user.email=ci@localhost commit -q -m "CI ${GITHUB_SHA::9} ${{ job.status }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" "report:refs/heads/ci/${GITHUB_REF_NAME}"
