@@ -52,3 +52,8 @@ The merge is reproducible with the rule script described below; hand-merged file
 - object-builder: widened `PoiTypes.register` locally (private in 26.3).
 - datagen: `withConditions` output keeps NeoForge's `ICondition...` overload and forwards it.
 - biome-api: removed upstream's new unit test `BiomeModificationContextImplTest` (it targets upstream's direct-mutation impl; FFAPI's impl wraps NeoForge builders).
+
+## Runtime fixes found by the server smoke test (NeoForge 26.3.0.100)
+- content-registries `fluid.EntityMixin`: NeoForge's `EntityFluidInteraction.update(Entity, Predicate<FluidType>)` returns `boolean`; the WrapOperation target descriptor now ends in `)Z`.
+- entity-events `LivingEntityMixin`: NeoForge 26.3 no longer patches `isBed`/`setBedOccupied` into `LivingEntity` sleeping; switched to upstream's vanilla `getBlockState`/`setBlockAndUpdate` injectors.
+- item-api `DataComponentMapBuilderMixin`: NeoForge 26.3 patches `get(DataComponentType)` into `DataComponentMap.Builder`; FFAPI's copy removed (it clashed and needed `@Overwrite`).
