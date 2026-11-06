@@ -30,3 +30,5 @@ mutable	field	net/minecraft/world/level/chunk/ChunkGenerator	featuresPerStep	Lja
 
 # Registry mutation sync
 accessible	field	net/minecraft/core/MappedRegistry	registrationInfos	Ljava/util/Map;
+accessible	method	net/minecraft/world/level/biome/MobSpawnSettings$Builder	forCategory	(Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/util/random/WeightedList$Builder;
+accessible	field	net/minecraft/world/level/biome/MobSpawnSettings$Builder	mobSpawnCosts	Ljava/util/Map;

@@ -33,6 +33,7 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.fabricmc.fabric.api.advancement.v1.AdvancementEvents;
 import net.fabricmc.fabric.api.advancement.v1.AdvancementSource;
 import net.fabricmc.fabric.api.advancement.v1.FabricAdvancementBuilder;
+import net.fabricmc.fabric.api.resource.v1.FabricResource;
 import net.fabricmc.fabric.impl.resource.pack.BuiltinModPackSource;
 import net.fabricmc.fabric.impl.resource.pack.ModResourcePackCreator;
 
@@ -67,11 +68,11 @@ public final class AdvancementUtil {
 
 	public static AdvancementSource determineSource(Resource resource) {
 		if (resource != null) {
-			PackSource packSource = resource.getFabricPackSource();
+			PackSource packSource = ((FabricResource) resource).getFabricPackSource();
 
 			if (packSource == PackSource.BUILT_IN) {
 				return AdvancementSource.VANILLA;
-			} else if (packSource == ModResourcePackCreator.RESOURCE_PACK_SOURCE || packSource instanceof BuiltinModPackSource) {
+			} else if (packSource == ModResourcePackCreator.RESOURCE_PACK_SOURCE || packSource instanceof BuiltinModPackSource || resource.knownPackInfo().map(p -> !p.isVanilla()).orElse(false)) {
 				return AdvancementSource.MOD;
 			}
 		}

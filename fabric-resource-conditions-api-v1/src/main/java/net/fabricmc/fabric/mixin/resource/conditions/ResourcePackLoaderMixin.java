@@ -33,9 +33,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.minecraft.server.packs.PackResources;
+import net.minecraft.server.packs.PackMetadataResources;
 
-import net.fabricmc.fabric.impl.resource.conditions.OverlayConditionsMetadata;
+import net.fabricmc.fabric.api.resource.conditions.v1.FabricOverlayMetadataSection;
 
 @Mixin(ResourcePackLoader.class)
 public class ResourcePackLoaderMixin {
@@ -48,7 +48,7 @@ public class ResourcePackLoaderMixin {
 	)
 	private static void applyOverlayConditions(PackType type, PackLocationInfo location, Pack.ResourcesSupplier resources, CallbackInfoReturnable<?> cir,
 	                                           @Local(name = "overlays") List<String> overlays,
-	                                           @Local(name = "primaryResources") PackResources pack
+	                                           @Local(name = "primaryResources") PackMetadataResources pack
 	) throws IOException {
 		// Avoid trying to load Fabric overlays for xplat mods that define both.
 		// The condition registry entries would be missing.
@@ -56,10 +56,14 @@ public class ResourcePackLoaderMixin {
 			return;
 		}
 		
-		OverlayConditionsMetadata overlayMetadata = pack.getMetadataSection(OverlayConditionsMetadata.SERIALIZER);
+		FabricOverlayMetadataSection overlayMetadata = pack.getMetadataSection(FabricOverlayMetadataSection.TYPE);
 
 		if (overlayMetadata != null) {
-			overlays.addAll(overlayMetadata.appliedOverlays());
+			for (FabricOverlayMetadataSection.Entry entry : overlayMetadata.overlays()) {
+				if (entry.condition().test(null)) {
+					overlays.add(entry.overlay());
+				}
+			}
 		}
 	}
 }

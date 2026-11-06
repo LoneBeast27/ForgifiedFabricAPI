@@ -41,3 +41,12 @@ The merge is reproducible with the rule script described below; hand-merged file
 
 ## Follow-ups
 - Upstream edits to FFAPI-deleted files are kept in the review diff for auditing (not committed).
+
+## CI fix log
+- Restored FFAPI per-module `build.gradle` files that upstream's build-logic rewrite replaced cleanly in the merge.
+- content-registries: kept a classtweaker with only the `EntityFluidExtension` interface injection (upstream deleted the file; potion-brewing entries removed with the API); added `fabric-item-api-v1` module dependency (oxidation scraping now uses `BlockTransformerHelperImpl`); dropped `DataMapHooksMixin` (fuel events removed upstream — fuel is the `cookingFuel` component in 26.3) and the COMPOSTABLES branch of `DataMapModifications` (compostable registry removed upstream).
+- biome-api: NeoForge 26.3 `BiomeModifier.modify` now receives `RegistryAccess` (no more `ServerLifecycleHooks` lookup); creature spawn probability is the `CREATURE_WORLD_GEN_SPAWN_PROBABILITY` attribute; spawns/costs written via widened `MobSpawnSettings$Builder.forCategory` / `mobSpawnCosts`.
+- advancement-api: advancements are a reloadable registry in 26.3 — removed FFAPI's old `ServerAdvancementManagerMixin` / `SimpleJson*`/`SimplePreparable*` mixins and `AdvancementSourceTracker`; upstream `ReloadableServerRegistriesMixin` adapted to NeoForge's 5-arg `RegistryDataLoader.load`; `AdvancementUtil.determineSource` uses the FFAPI `FabricResource` cast + known-pack check.
+- resource-conditions: NeoForge `ResourcePackLoaderMixin` uses upstream's renamed `FabricOverlayMetadataSection` and `PackMetadataResources`.
+- events-interaction: removed `FakePlayerPacketListener.handleAnimate` (swing packet no longer exists in 26.3).
+- object-builder: widened `PoiTypes.register` locally (private in 26.3).

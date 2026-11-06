@@ -325,7 +325,7 @@ public class BiomeModificationContextImpl implements BiomeModificationContext {
 
 		@Override
 		public void setCreatureGenerationProbability(float probability) {
-			spawnSettings.creatureGenerationProbability(probability);
+			attributes.set(EnvironmentAttributes.CREATURE_WORLD_GEN_SPAWN_PROBABILITY, probability);
 		}
 
 		@Override
@@ -356,7 +356,7 @@ public class BiomeModificationContextImpl implements BiomeModificationContext {
 			Objects.requireNonNull(category);
 			Objects.requireNonNull(data);
 
-			spawnSettings.addSpawn(category, weight, data);
+			spawnSettings.forCategory(category).add(data, weight);
 		}
 
 		@Override
@@ -399,7 +399,7 @@ public class BiomeModificationContextImpl implements BiomeModificationContext {
 		@Override
 		public void addMobCharge(EntityType<?> entityType, double charge, double energyBudget) {
 			Objects.requireNonNull(entityType);
-			spawnSettings.addMobCharge(entityType, charge, energyBudget);
+			spawnSettings.mobSpawnCosts.put(entityType, new MobSpawnSettings.MobSpawnCost(energyBudget, charge));
 		}
 
 		@Override

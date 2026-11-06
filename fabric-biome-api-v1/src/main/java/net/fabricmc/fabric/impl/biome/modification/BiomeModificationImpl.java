@@ -103,8 +103,7 @@ public class BiomeModificationImpl {
 
 	public record FabricBiomeModifier(List<ModifierRecord> modifiers) implements BiomeModifier {
 		@Override
-		public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
-			RegistryAccess.Frozen registryAccess = ServerLifecycleHooks.getCurrentServer().registryAccess();
+		public void modify(RegistryAccess registryAccess, Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
 			ResourceKey<Biome> key = biome.unwrapKey().orElseThrow();
 			Biome biomeValue = biome.value();
 			BiomeSelectionContext selectionContext = new BiomeSelectionContextImpl(registryAccess, key, biome);

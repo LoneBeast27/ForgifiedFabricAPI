@@ -27,6 +27,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.RegistryDataLoader;
@@ -36,13 +37,14 @@ import net.minecraft.server.packs.resources.ResourceManager;
 import net.fabricmc.fabric.api.advancement.v1.AdvancementEvents;
 import net.fabricmc.fabric.impl.advancement.AdvancementUtil;
 
+// FFAPI: NeoForge passes the pending context tags as an extra argument to RegistryDataLoader.load
 @Mixin(ReloadableServerRegistries.class)
 abstract class ReloadableServerRegistriesMixin {
-	@WrapOperation(method = "reload", at = @At(value = "INVOKE", target = "Lnet/minecraft/resources/RegistryDataLoader;load(Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/List;Ljava/util/List;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;"))
-	private static CompletableFuture<RegistryAccess.Frozen> modifyAdvancements(ResourceManager resourceManager, List<HolderLookup.RegistryLookup<?>> contextRegistries, List<RegistryDataLoader.RegistryData<?>> registriesToLoad, Executor executor, Operation<CompletableFuture<RegistryAccess.Frozen>> original, @Local(name = "loadingContextWithTags") HolderLookup.Provider provider) {
+	@WrapOperation(method = "reload", at = @At(value = "INVOKE", target = "Lnet/minecraft/resources/RegistryDataLoader;load(Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/List;Ljava/util/List;Ljava/util/concurrent/Executor;Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;"))
+	private static CompletableFuture<RegistryAccess.Frozen> modifyAdvancements(ResourceManager resourceManager, List<HolderLookup.RegistryLookup<?>> contextRegistries, List<RegistryDataLoader.RegistryData<?>> registriesToLoad, Executor executor, List<Registry.PendingTags<?>> pendingTags, Operation<CompletableFuture<RegistryAccess.Frozen>> original, @Local(name = "loadingContextWithTags") HolderLookup.Provider provider) {
 		AdvancementUtil.startReload(resourceManager, provider);
 
-		return original.call(resourceManager, contextRegistries, registriesToLoad, executor)
+		return original.call(resourceManager, contextRegistries, registriesToLoad, executor, pendingTags)
 				.thenApply(registries -> {
 					AdvancementEvents.ALL_LOADED.invoker().onAdvancementsLoaded(resourceManager, registries.lookupOrThrow(Registries.ADVANCEMENT), registries);
 					return registries;
